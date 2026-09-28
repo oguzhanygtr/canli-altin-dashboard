@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    const res = await fetch('https://finans.truncgil.com/v3/today.json', { 
+    const res = await fetch('https://finans.truncgil.com/v4/today.json', { 
         next: { revalidate: 30 } // Cache for 30 seconds
     });
     const data = await res.json();
